@@ -11,7 +11,7 @@ All libraries can be installed directly from the Library Manager in the IDE
 
 ## Configuration
 1. Copy the `configexample.h` file and rename it `config.h`
-1. Edit the settings in config.h for your mqtt broker and wifi
+1. Edit the settings in `config.h` for your ClientId (deviceId), mqtt broker and wifi settings
 
 ## Payload
 Chispas protocol parser (lite version of Sparkplug B)
