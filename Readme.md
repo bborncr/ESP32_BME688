@@ -15,17 +15,17 @@ All libraries can be installed directly from the Library Manager in the IDE
 
 ## Payload
 Chispas protocol parser (lite version of Sparkplug B)
-Topic format: <Namespace>/<GroupId>/<MessageType>/<deviceId>
-Message types
 
-DBIRTH
-DDEATH
-DDATA
-DMCD
-The Measurement is taken from <Namespace>/<GroupId>/<MessageType>
+Topic format: `<Namespace>/<GroupId>/<MessageType>/<deviceId>`
 
-Incoming payload can be any single object (no nested objects or lists)
+Message types:
+* DBIRTH (sent when device connects)
+* DDEATH (sent by MQTT broker when device disconnects)
+* DDATA (JSON payload)
+* DMCD (send commands to the device)
 
-The payload is mapped to the key/value fields in the database
-
-The deviceId from the topic is mapped to the tags
+In my NODE-RED and INFLUX database I do the following: 
+* The Measurement is taken from `<Namespace>/<GroupId>/<MessageType>`
+* Incoming payload can be any single object (no nested objects or lists)
+* The payload is mapped to the key/value fields in the database
+* The deviceId from the topic is mapped to the Influx tags (indexes)
