@@ -22,7 +22,7 @@ Message types:
 * DBIRTH (sent when device connects)
 * DDEATH (sent by MQTT broker when device disconnects)
 * DDATA (JSON payload)
-* DMCD (send commands to the device)
+* DDCMD (send commands to the device)
 
 In my NODE-RED setup and INFLUX database I do the following mapping:
 * The Measurement is taken from `<Namespace>/<GroupId>/<MessageType>`
