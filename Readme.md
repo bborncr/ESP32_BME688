@@ -24,7 +24,7 @@ Message types:
 * DDATA (JSON payload)
 * DMCD (send commands to the device)
 
-In my NODE-RED and INFLUX database I do the following: 
+In my NODE-RED setup and INFLUX database I do the following mapping:
 * The Measurement is taken from `<Namespace>/<GroupId>/<MessageType>`
 * Incoming payload can be any single object (no nested objects or lists)
 * The payload is mapped to the key/value fields in the database
