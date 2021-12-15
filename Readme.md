@@ -12,3 +12,20 @@ All libraries can be installed directly from the Library Manager in the IDE
 ## Configuration
 1. Copy the configexample.h file and rename it config.h
 1. Edit the settings in config.h for your mqtt broker and wifi
+
+## Payload
+Chispas protocol parser (lite version of Sparkplug B)
+Topic format: <Namespace>/<GroupId>/<MessageType>/<deviceId>
+Message types
+
+DBIRTH
+DDEATH
+DDATA
+DMCD
+The Measurement is taken from <Namespace>/<GroupId>/<MessageType>
+
+Incoming payload can be any single object (no nested objects or lists)
+
+The payload is mapped to the key/value fields in the database
+
+The deviceId from the topic is mapped to the tags
