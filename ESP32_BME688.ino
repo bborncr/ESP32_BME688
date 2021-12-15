@@ -65,15 +65,15 @@ void setup() {
 void onConnectionEstablished()
 {
   // Subscribe to "mytopic/test" and display received message to Serial
-  client.subscribe(TOPIC "DCMD/" CLIENT, [](const String & payloadString) {
-    deserializeJson(commands, payloadString);
-    if (commands.containsKey("scanrate")) {
-      scanrate = commands["scanrate"];
-    }
-    if (commands.containsKey("led")) {
-      led = commands["led"];
-    }
-  });
+//  client.subscribe(TOPIC "DCMD/" CLIENT, [](const String & payloadString) {
+//    deserializeJson(commands, payloadString);
+//    if (commands.containsKey("scanrate")) {
+//      scanrate = commands["scanrate"];
+//    }
+//    if (commands.containsKey("led")) {
+//      led = commands["led"];
+//    }
+//  });
 
   client.publish(TOPIC "DBIRTH/" CLIENT, "{\"status\": \"online\"}");
 }
