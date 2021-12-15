@@ -10,7 +10,7 @@ All libraries can be installed directly from the Library Manager in the IDE
 * Adafruit BME680 2.0.1 (will install Adafruit Unified Sensor Library)
 
 ## Configuration
-1. Copy the configexample.h file and rename it config.h
+1. Copy the `configexample.h` file and rename it `config.h`
 1. Edit the settings in config.h for your mqtt broker and wifi
 
 ## Payload
