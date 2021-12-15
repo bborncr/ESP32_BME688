@@ -20,7 +20,7 @@ long previousMillis;
 DynamicJsonDocument payload(200);
 DynamicJsonDocument commands(200);
 
-int scanrate = 10000;
+int scanrate = 10000; // send every ten seconds
 bool led = false;
 String output;
 
